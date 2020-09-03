@@ -5,7 +5,7 @@ import controllers from "./controllers/index";
 import components from "./components/index";
 import services from "./services/index";
 import filters from "./filters/index";
-import OneConfiguration from "./config/app.module.one.config";
+import ModuleOneConfiguration from "./config/ModuleOneConfiguration";
 
 class ModuleOneModule {
 
@@ -20,7 +20,7 @@ class ModuleOneModule {
 
       this.module.config(['$stateProvider','$urlRouterProvider','$locationProvider', 
       ($stateProvider: IStateProvider, $urlRouterProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) => {
-         return new OneConfiguration($stateProvider, $urlRouterProvider, $locationProvider);
+         return new ModuleOneConfiguration($stateProvider, $urlRouterProvider, $locationProvider);
       }]);    
       controllers.forEach(controller => this.module.controller(controller.name , controller));
       components.forEach(component => this.module.component(component.NAME, new component));

@@ -4,19 +4,19 @@ import { IStateProvider, IUrlRouterProvider, IState, IStateParamsService } from 
 import HomeOneController from "../controllers/HomeOne/HomeOneController";
 // import HomeController from "../controllers/Home/HomeController";
 
-class OneConfiguration {
+class ModuleOneConfiguration {
     
     constructor(
         private $stateProvider: IStateProvider,
         private $urlRouterProvider: IUrlRouterProvider,
         private $locationProvider: ILocationProvider) {
             this.init();
-            console.log("Router");
+            console.log("Router One");
         }
         
     
     public init() : void {
-        this.$stateProvider.state(OneConfiguration.homeState());
+        this.$stateProvider.state(ModuleOneConfiguration.homeState());
         this.$urlRouterProvider.otherwise("/homeone");        
     }
 
@@ -33,4 +33,4 @@ class OneConfiguration {
     }
 }
 
-export default OneConfiguration;
+export default ModuleOneConfiguration;

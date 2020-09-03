@@ -4,19 +4,19 @@ import { IStateProvider, IUrlRouterProvider, IState, IStateParamsService } from 
 import HomeTwoController from "../controllers/HomeTwo/HomeTwoController";
 // import HomeController from "../controllers/Home/HomeController";
 
-class TwoConfiguration {
+class ModuleTwoConfiguration {
     
     constructor(
         private $stateProvider: IStateProvider,
         private $urlRouterProvider: IUrlRouterProvider,
         private $locationProvider: ILocationProvider) {
             this.init();
-            console.log("Router");
+            console.log("Router Two");
         }
         
     
     public init() : void {
-        this.$stateProvider.state(TwoConfiguration.homeState());   
+        this.$stateProvider.state(ModuleTwoConfiguration.homeState());   
         this.$urlRouterProvider.otherwise("/homeone");
     }
 
@@ -33,4 +33,4 @@ class TwoConfiguration {
     }
 }
 
-export default TwoConfiguration;
+export default ModuleTwoConfiguration;
