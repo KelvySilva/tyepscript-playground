@@ -17,7 +17,7 @@ class ModuleTwoConfiguration {
     
     public init() : void {
         this.$stateProvider.state(ModuleTwoConfiguration.homeState());   
-        this.$urlRouterProvider.otherwise("/homeone");
+        // this.$urlRouterProvider.otherwise("/homeone");
     }
 
 

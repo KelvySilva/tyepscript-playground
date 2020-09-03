@@ -19,15 +19,15 @@ class App {
       
       
       
-      // this.module.config(['$stateProvider','$urlRouterProvider','$locationProvider', 
-      // ($stateProvider: IStateProvider, $routeProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) => {
-      //       $stateProvider.state("Inicial", {
-      //          url:"/initial",
-      //          templateUrl:'../src/pages/home.html',
-      //          controllerAs:'ctrlInicial'
-      //       });
-      //       $routeProvider.otherwise("/initial");
-      // }])   
+      this.module.config(['$stateProvider','$urlRouterProvider','$locationProvider', 
+      ($stateProvider: IStateProvider, $routeProvider: IUrlRouterProvider, $locationProvider: ILocationProvider) => {
+            $stateProvider.state("Inicial", {
+               url:"/initial",
+               templateUrl:'../src/pages/home.html',
+               controllerAs:'ctrlInicial'
+            });
+            $routeProvider.otherwise("/initial");
+      }])   
    }
  
 }
