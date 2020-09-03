@@ -7,8 +7,6 @@ import modules from './modules/index';
 class App {
 
    private module: IModule;
-   private moduleHomeOne:any;
-   private moduleHomeTwo:any;
 
    constructor() {
       // this.moduleHomeOne = new ModuleOneModule();
